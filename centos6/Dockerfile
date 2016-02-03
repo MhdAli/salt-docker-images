@@ -6,6 +6,7 @@ RUN rpm --import https://repo.saltstack.com/yum/redhat/6/x86_64/latest/SALTSTACK
     rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 RUN yum -y install salt-minion python-pip &&\
     chkconfig --add salt-minion &&\
-    pip install testinfra
+    easy_install pbr && \
+    easy_install testinfra
 
 CMD ["/sbin/init"]
