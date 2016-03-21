@@ -9,4 +9,6 @@ RUN yum -y install salt-minion python-pip &&\
     easy_install pbr && \
     easy_install testinfra
 
+ENV container=docker
+
 CMD ["/sbin/init"]

@@ -8,4 +8,6 @@ RUN yum -y install salt-minion net-tools python-pip &&\
     systemctl enable salt-minion && \
     pip install testinfra
 
+ENV container=docker
+
 CMD ["/sbin/init"]
